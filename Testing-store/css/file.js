@@ -2441,12 +2441,12 @@
 // Ланцюжки методів
 // ПРИКЛАД З КОНСПЕКТА (приклад сортовання з проміжною функцією)
 
-const students = [
-  { name: "Mango", score: 83, courses: ["mathematics", "physics"] },
-  { name: "Poly", score: 59, courses: ["science", "mathematics"] },
-  { name: "Ajax", score: 37, courses: ["physics", "biology"] },
-  { name: "Kiwi", score: 94, courses: ["literature", "science"] },
-];
+// const students = [
+//   { name: "Mango", score: 83, courses: ["mathematics", "physics"] },
+//   { name: "Poly", score: 59, courses: ["science", "mathematics"] },
+//   { name: "Ajax", score: 37, courses: ["physics", "biology"] },
+//   { name: "Kiwi", score: 94, courses: ["literature", "science"] },
+// ];
 
 // const sortedByAscendingScore = students.toSorted((a, b) => a.score - b.score);
 // const names = sortedByAscendingScore.map(student => student.name);
@@ -2509,3 +2509,601 @@ const students = [
 //     console.log(names);
 
 
+// const afun = (x, y)
+ 
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+//                  Модуль 6. ООП. Класи
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//
+// Контекст виконання функції
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Ключове слово this
+
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
+//   checkPizza(pizzaName) {
+//    return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+// };
+
+
+// console.log(pizzaPalace.order("Smoked")
+// );
+// console.log(pizzaPalace.order("Big Mike"));
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Глобальний контекст
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Контекст методу об'єкта
+
+// Метод call()
+// Метод apply()
+// Метод bind() і втрата контексту
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Прототипи
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Прототип об'єкта   Object.create(obj)
+
+
+// const parent = {
+//   name: "Stacey",
+//   surname: "Moore",
+//   age: 54,
+//   heritage: "Irish",
+// };
+
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+
+// console.log(parent.hasOwnProperty("surname"));
+// console.log(parent.hasOwnProperty("heritage"));
+// console.log(child.hasOwnProperty("name"));
+// console.log(child.name);
+// console.log(child.hasOwnProperty("age"));
+// console.log(child.age);
+// console.log(child.hasOwnProperty("surname"));
+// console.log(child.surname);
+// console.log(child.hasOwnProperty("heritage"));
+// console.log(child.heritage);
+// console.log(parent.isPrototypeOf(child));
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Перевірка прототипу
+// Власні і невласні властивості
+// Перебір власних властивостей
+// Ланцюжки прототипів
+
+// const ancestor = {
+//   name: "Paul",
+//   age: 83,
+//   surname: "Dawson",
+//   heritage: "Irish",
+// };
+
+// const parent = Object.create(ancestor);
+// parent.name = "Stacey";
+// parent.surname = "Moore";
+// parent.age = 54;
+
+// const child = Object.create(parent);
+// child.name = "Jason";
+// child.age = 27;
+
+
+
+// console.log(ancestor.isPrototypeOf("parent"));
+// console.log(parent.isPrototypeOf("child"));
+// console.log(ancestor.hasOwnProperty("surname"));
+// console.log(ancestor.surname);
+// console.log(parent.hasOwnProperty("surname"));
+// console.log(parent.surname);
+// console.log(child.hasOwnProperty("surname"));
+// console.log(child.surname);
+// console.log(ancestor.hasOwnProperty("heritage"));
+// console.log(ancestor.heritage);
+// console.log(parent.hasOwnProperty("heritage"));
+// console.log(parent.heritage);
+// console.log(child.hasOwnProperty("heritage"));
+// console.log(child.heritage);
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//
+// Класи
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Оголошення класу
+
+// Клас(оголошення)
+// class Car {}
+// екземпляр (оголошення)
+// console.log(new Car());
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Конструктор класу
+
+// class Car {
+//     constructor(brand, model, price) {
+//         this.brand = brand;
+//         this.model = model;
+//         this.price = price
+//     }
+// }
+
+// const firstCar = new Car("Audi", "Q3", 36000)
+// console.log(firstCar);
+// console.log(new Car("BMW", "X5", 58900));
+// console.log(new Car("Nissan","Murano", 31700));
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Об'єкт параметрів
+
+// class Car {
+//   constructor(param) {
+//     this.brand = param.brand;
+//     this.model = param.model;
+//     this.price = param.price;
+//   }
+// }
+
+// console.log(new Car({ brand: "Audi", model: "Q3", price: 36000 }));
+// console.log(new Car({ brand: "BMW", model: "X5", price: 58900 }));
+// console.log(new Car({ brand: "Nissan", model: "Murano", price: 31700 }));
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Методи класу
+
+// class Car {
+//   constructor(params) {
+//     this.brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//     }
+    
+//     getPrice() {
+//         return this.price;
+//     }
+//     changePrice(newPrice) {
+//         this.price = newPrice;
+//     }
+// }
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Приватні властивості (#)
+
+// class Car {
+//     #brand;
+//     // model;
+//     // price;
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//     }
+    
+//     getBrand() {
+//         return this.#brand;
+//     }
+//     changeBrand(newBrand) {
+//         this.#brand = newBrand;
+//     }
+// }
+
+// class Car {
+//   #brand;
+//   model;
+//   price;
+
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.model = params.model;
+//     this.price = params.price;
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+  
+//   getBrand() {
+//     return this.#brand;
+//   }
+  
+//   changeBrand(newBrand) {
+//     return this.#brand = newBrand;
+//   }
+// }
+
+
+// const truck = new Car({ brand: "Audi", model: "Q3", price: 36000 })
+// console.log(truck);
+// // truck.changeBrand("Honda")
+// console.log(truck.changeBrand("Honda"));
+ 
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Геттери і сеттери
+
+// class Car {
+//     #brand;
+//     #model;
+//     #price;
+
+//   constructor(params) {
+//     this.#brand = params.brand;
+//     this.#model = params.model;
+//     this.#price = params.price;
+//   }
+
+//   get brand() {
+//     return this.#brand;
+//   }
+
+//   set brand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+
+//   get model() {
+//     return this.#model;
+//   }
+
+//   set model(newModel) {
+//     this.#model = newModel;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     this.#price = newPrice;
+//   }
+// }
+
+// const mango = new Car({
+//     price: 100,
+// });
+
+
+// console.log(mango.price);
+
+
+// mango.price = 568;
+// console.log(mango.price);
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Статичні властивості
+
+
+// class Car {
+//     static maxPrice = 50000;
+//   #price;
+
+//   constructor(params) {
+//     this.#price = params.price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//     set price(newPrice) {
+//         if (newPrice <= Car.maxPrice) {
+//           this.#price = newPrice;
+//       }
+      
+      
+//   }
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Статичні методи
+
+// class Car {
+//     static #maxPrice = 50000;
+//     static checkPrice(price) {
+//         if (price >=  Car.#maxPrice) {
+//             return `"Error! Price exceeds the maximum"`
+//         }else{return "Success! Price is within acceptable limits"}
+//     }
+
+//   constructor(params) {
+//     this.price = params.price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Наслідування класів
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User{
+//     static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser"
+//     }
+// }
+
+// console.log(Admin.role.BASIC);
+// console.log(Admin.role.SUPERUSER);
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Конструктор дочірнього класу
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//     };
+    
+//      constructor({ email, access }) {
+//     super(email); // Викликаємо конструктор батьківського класу User з параметром email
+//     this.access = access;
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Методи дочірнього класу
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   // Публічна властивість для зберігання чорного списку поштових адрес користувачів
+//   blacklistedEmails = [];
+
+//   constructor(params) {
+//     super(params.email);
+//     this.access = params.access;
+//   }
+
+//   // Публічний метод для додавання пошти у чорний список
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+
+//   // Публічний метод для перевірки пошти у чорному списку
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+
+//  ДЗ І (МОДУЛЬ 6)
+// Перед звільненням розробник зламав вихідний код управління акаунтами користувачів нашого сервісу доставки їжі.
+// Виконай рефакторинг методів об'єкта customer, розставивши відсутні this під час звернення до властивостей об'єкта.
+// Використай цей стартовий код і виконай рефакторинг. Після оголошення об'єкта ми додали виклики методів.
+// У консоль будуть виведені результати їх роботи.Будь ласка, нічого там не змінюй.
+
+const customer = {
+  username: "Mango",
+  balance: 24000,
+  discount: 0.1,
+  orders: ["Burger", "Pizza", "Salad"],
+  // Change code below this line
+  getBalance() {
+    return this.balance;
+  },
+  getDiscount() {
+    return this.discount;
+  },
+  setDiscount(value) {
+    this.discount = value;
+  },
+  getOrders() {
+    return this.orders;
+  },
+  addOrder(cost, order) {
+    this.balance -= cost - cost * this.discount;
+    this.orders.push(order);
+  },
+//    Change code above this line
+};
+
+customer.setDiscount(0.15);
+console.log(customer.getDiscount()); // 0.15
+customer.addOrder(5000, "Steak");
+console.log(customer.getBalance()); // 19750
+console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+
+
+//  ДЗ ІІ (МОДУЛЬ 6)
+
+// Створи клас Storage, який створюватиме об'єкти для управління складом товарів.
+// Клас очікує лише один аргумент — початковий масив товарів,
+//     який записується до створеного об'єкта в приватну властивість items.
+// Оголоси наступні методи класу:
+// - getItems() — повертає масив поточних товарів у приватній властивості items.
+// - addItem(newItem) — приймає новий товар newItem і додає його до масиву
+// товарів у приватну властивість items об'єкта.
+// - removeItem(itemToRemove) — приймає рядок з назвою товару itemToRemove
+// і видаляє його з масиву товарів у приватній властивості items об'єкта.
+// Візьми код нижче з ініціалізацією екземпляра й викликами методів і
+// встав його після оголошення класу для перевірки коректності роботи.
+// У консоль будуть виведені результати їх роботи.Будь ласка,
+//     нічого там не змінюй.
+
+class Storage {
+  #items;
+
+  constructor(params) {
+    this.#items = params;
+  }
+
+  getItems() {
+    return this.#items;
+  }
+
+  addItem(newItem) {
+    this.#items.push(newItem);
+  }
+
+  removeItem = (itemToRemove) => {
+      const findItem = this.#items.indexOf(itemToRemove)
+        const deleteItem = this.#items.splice(findItem, 1);
+      return deleteItem
+  }
+}
+
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+//  ДЗ ІІІ (МОДУЛЬ 6)
+
+
+class StringBuilder {
+    #value;
+    constructor(initialValue) {
+        this.#value = initialValue
+    }
+    getValue() {
+        return this.#value
+     }
+    padEnd(str) { 
+        this.#value = this.#value.concat(str);
+    }
+    padStart(str) {
+        this.#value = str.concat(this.#value);
+     }
+    padBoth(str) {
+        this.#value = str.concat(this.#value).concat(str);
+    }
+    
+}
+
+
+const builder = new StringBuilder(".");
+console.log(builder.getValue()); // "."
+builder.padStart("^");
+console.log(builder.getValue()); // "^."
+builder.padEnd("^");
+console.log(builder.getValue()); // "^.^"
+builder.padBoth("=");
+console.log(builder.getValue()); // "=^.^="
