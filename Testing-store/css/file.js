@@ -2998,36 +2998,36 @@
 // Використай цей стартовий код і виконай рефакторинг. Після оголошення об'єкта ми додали виклики методів.
 // У консоль будуть виведені результати їх роботи.Будь ласка, нічого там не змінюй.
 
-const customer = {
-  username: "Mango",
-  balance: 24000,
-  discount: 0.1,
-  orders: ["Burger", "Pizza", "Salad"],
-  // Change code below this line
-  getBalance() {
-    return this.balance;
-  },
-  getDiscount() {
-    return this.discount;
-  },
-  setDiscount(value) {
-    this.discount = value;
-  },
-  getOrders() {
-    return this.orders;
-  },
-  addOrder(cost, order) {
-    this.balance -= cost - cost * this.discount;
-    this.orders.push(order);
-  },
+// const customer = {
+//   username: "Mango",
+//   balance: 24000,
+//   discount: 0.1,
+//   orders: ["Burger", "Pizza", "Salad"],
+//   // Change code below this line
+//   getBalance() {
+//     return this.balance;
+//   },
+//   getDiscount() {
+//     return this.discount;
+//   },
+//   setDiscount(value) {
+//     this.discount = value;
+//   },
+//   getOrders() {
+//     return this.orders;
+//   },
+//   addOrder(cost, order) {
+//     this.balance -= cost - cost * this.discount;
+//     this.orders.push(order);
+//   },
 //    Change code above this line
-};
+// };
 
-customer.setDiscount(0.15);
-console.log(customer.getDiscount()); // 0.15
-customer.addOrder(5000, "Steak");
-console.log(customer.getBalance()); // 19750
-console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
+// customer.setDiscount(0.15);
+// console.log(customer.getDiscount()); // 0.15
+// customer.addOrder(5000, "Steak");
+// console.log(customer.getBalance()); // 19750
+// console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 
 
 //  ДЗ ІІ (МОДУЛЬ 6)
@@ -3046,64 +3046,149 @@ console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
 // У консоль будуть виведені результати їх роботи.Будь ласка,
 //     нічого там не змінюй.
 
-class Storage {
-  #items;
+// class Storage {
+//   #items;
 
-  constructor(params) {
-    this.#items = params;
-  }
+//   constructor(params) {
+//     this.#items = params;
+//   }
 
-  getItems() {
-    return this.#items;
-  }
+//   getItems() {
+//     return this.#items;
+//   }
 
-  addItem(newItem) {
-    this.#items.push(newItem);
-  }
+//   addItem(newItem) {
+//     this.#items.push(newItem);
+//   }
 
-  removeItem = (itemToRemove) => {
-      const findItem = this.#items.indexOf(itemToRemove)
-        const deleteItem = this.#items.splice(findItem, 1);
-      return deleteItem
-  }
-}
+//   removeItem = (itemToRemove) => {
+//       const findItem = this.#items.indexOf(itemToRemove)
+//         const deleteItem = this.#items.splice(findItem, 1);
+//       return deleteItem
+//   }
+// }
 
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-storage.addItem("Droid");
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-storage.removeItem("Prolonger");
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 //  ДЗ ІІІ (МОДУЛЬ 6)
 
 
-class StringBuilder {
-    #value;
-    constructor(initialValue) {
-        this.#value = initialValue
-    }
-    getValue() {
-        return this.#value
-     }
-    padEnd(str) { 
-        this.#value = this.#value.concat(str);
-    }
-    padStart(str) {
-        this.#value = str.concat(this.#value);
-     }
-    padBoth(str) {
-        this.#value = str.concat(this.#value).concat(str);
-    }
+// class StringBuilder {
+//     #value;
+//     constructor(initialValue) {
+//         this.#value = initialValue
+//     }
+//     getValue() {
+//         return this.#value
+//      }
+//     padEnd(str) { 
+//         this.#value = this.#value.concat(str);
+//     }
+//     padStart(str) {
+//         this.#value = str.concat(this.#value);
+//      }
+//     padBoth(str) {
+//         this.#value = str.concat(this.#value).concat(str);
+//     }
     
-}
+// }
 
 
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// Модуль 9. Вебсховище
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Локальне сховище // Local Storage
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// console.log(window.localStorage);
+// Storage {length: 0}
+
+
+// localStorage.setItem("ui-theme", "light");
+// console.log(localStorage); // Storage {ui-theme: "light", length: 1}
+
+// const settings = {
+//   theme: "dark",
+//   isAuthenticated: true,
+//   options: [1, 2, 3],
+// };
+
+// localStorage.setItem("settings", JSON.stringify(settings));
+
+// console.log(localStorage);
+
+// const savedTheme = localStorage.getItem("ui-theme"); 
+// console.log(savedTheme); // "light"
+
+
+// const settings = {
+//   theme: "dark",
+//   isAuthenticated: true,
+//   options: [1, 2, 3],
+// };
+// localStorage.setItem("settings", JSON.stringify(settings));
+
+// const savedSettings = localStorage.getItem("settings");
+// console.log(savedSettings); // A string
+
+// const parsedSettings = JSON.parse(savedSettings);
+// console.log(parsedSettings); // Settings object
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// Кейс: Форма з повідомленням
+
+
+
+
+const form = document.querySelector(".feedback-form");
+const textarea = form.elements.message;
+const localStorageKey = "goit-example-message";
+
+textarea.value = localStorage.getItem(localStorageKey) ?? "";
+
+form.addEventListener("input", (evt) => {
+  localStorage.setItem(localStorageKey, evt.target.value);
+});
+
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+	console.log(evt.target.elements.message.value);
+  localStorage.removeItem(localStorageKey);
+  form.reset();
+});
