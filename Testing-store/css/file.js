@@ -3176,19 +3176,56 @@
 
 
 
-const form = document.querySelector(".feedback-form");
-const textarea = form.elements.message;
-const localStorageKey = "goit-example-message";
+// const form = document.querySelector(".feedback-form");
+// const textarea = form.elements.message;
+// const localStorageKey = "goit-example-message";
 
-textarea.value = localStorage.getItem(localStorageKey) ?? "";
+// textarea.value = localStorage.getItem(localStorageKey) ?? "";
 
-form.addEventListener("input", (evt) => {
-  localStorage.setItem(localStorageKey, evt.target.value);
-});
+// form.addEventListener("input", (evt) => {
+//   localStorage.setItem(localStorageKey, evt.target.value);
+// });
 
-form.addEventListener("submit", (evt) => {
-  evt.preventDefault();
-	console.log(evt.target.elements.message.value);
-  localStorage.removeItem(localStorageKey);
-  form.reset();
-});
+// form.addEventListener("submit", (evt) => {
+//   evt.preventDefault();
+// 	console.log(evt.target.elements.message.value);
+//   localStorage.removeItem(localStorageKey);
+//   form.reset();
+// });
+
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+// МОДУЛЬ 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// console.time("timing of circle")
+
+// for (let i = 1; i < 200000; i++){
+//   console.log(i);
+// }
+
+// console.timeEnd("timing of circle")
+
+
+
+// Дата і Час   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// setInterval(() => {
+//   const timeInfo = new Date()
+
+// console.log(timeInfo);
+// }, 1000);
+
+// const timeInfo = new Date()
+
+// console.log(timeInfo);
